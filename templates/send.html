@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h1>This is your remote</h1>
+  <p>Powered by Arduino and Flask</p>
+
+  <h2>Send arbitrary code</h2>
+  <form action="{{ url_for('send') }}" method=post>
+    <label for=code>Code</label>
+    <input type=text name=code id=code>
+    <input type="submit" value="Send">
+  </form>
+
+  <h2>Send predefined codes</h2>
+
+  <div class="row">
+    <div class=col-4>
+      <form action="{{ url_for('send') }}" id="a_on" method=post>
+        <input type="hidden" name="code" value="000010111101">
+        <input type="submit" class="myButton" value="A - ON">
+      </form>
+      <form action="{{ url_for('send') }}" id="b_on" method=post>
+        <input type="hidden" name="code" value="000011011101">
+        <input type="submit" class="myButton" value="B - ON">
+      </form>
+      <form action="{{ url_for('send') }}" id="c_on" method=post>
+        <input type="hidden" name="code" value="000011101101">
+        <input type="submit" class="myButton" value="C - ON">
+      </form>
+      <form action="{{ url_for('send') }}" id="d_on" method=post>
+        <input type="hidden" name="code" value="000011110101">
+        <input type="submit" class="myButton" value="D - ON">
+      </form>
+    </div>
+
+    <div class=col-3>
+      <form action="{{ url_for('send') }}" id="a_off" method=post>
+        <input type="hidden" name="code" value="000010111110">
+        <input type="submit" class="myButton" value="A - OFF">
+      </form>
+      <form action="{{ url_for('send') }}" id="b_off" method=post>
+        <input type="hidden" name="code" value="000011011110">
+        <input type="submit" class="myButton" value="B - OFF">
+      </form>
+      <form action="{{ url_for('send') }}" id="c_off" method=post>
+        <input type="hidden" name="code" value="000011101110">
+        <input type="submit" class="myButton" value="C - OFF">
+      </form>
+      <form action="{{ url_for('send') }}" id="d_off" method=post>
+        <input type="hidden" name="code" value="000011110110">
+        <input type="submit" class="myButton" value="D - OFF">
+      </form>
+    </div>
+  </div>
+
+
+
+{% endblock %}
+
+
