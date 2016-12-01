@@ -10,11 +10,8 @@ You can run a little web server to serve a remote control for your Radio plugs.
 With integrated speech recognition, you can control your electronic devices at home with your voice.
 For instance, configure your web server to turn lights on and off when you say "Turn lights on" or "Turn lights off". See this example video:
 
-# TODO remove ticks
-```
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Bc53nK9u0qA" target="_blank"><img src="http://img.youtube.com/vi/Bc53nK9u0qA/0.jpg"
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
-```
 
 ## Overview and setup
 
